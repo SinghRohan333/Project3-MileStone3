@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap");
+/*  font-family: "Sora", serif;*/
+/* font-family: "ADLaM Display", serif;*/
+@import "tailwindcss";
+@plugin "daisyui";
+@theme {
+  --color-primaryC: #ffdc26;
+  --color-secondaryC: #f9df8a;
+  --font-primaryF: "Sora", "serif";
+  --font-secondaryF: "ADLaM Display", "serif";
+}
+.custom-outline {
+  border-color: #ffdc26; /* Change the outline color here */
+}

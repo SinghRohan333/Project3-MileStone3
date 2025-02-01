@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Shop</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      /* Text Animation */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 1s ease-out infinite alternate;
+        animation-delay: 1s;
+      }
+
+      /* Button Hover Animation */
+      .hover-grow:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Image Bounce Animation */
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .bounce {
+        animation: bounce 2s infinite;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -101,32 +146,41 @@
       >
         <div class="text-justify w-9/10">
           <div
-            class="font-secondaryF font-extrabold text-[2rem] relative z-2 2xl:text-[4rem] xl:text-[4rem]"
+            class="font-secondaryF font-extrabold text-[2rem] relative z-2 2xl:text-[4rem] xl:text-[4rem] fade-in-up"
           >
             <h1>Pamper Your Pet,</h1>
             <h1>Because They Deserve</h1>
             <h1>The Best</h1>
           </div>
-          <div class="mt-4 relative z-2 2xl:hidden xl:hidden">
+          <div
+            class="mt-4 relative z-2 2xl:hidden xl:hidden fade-in-up"
+            style="animation-delay: 0.5s"
+          >
             <p class="font-primaryF text-[1rem] text-[#111111]">
               Discover a world of treats, toys, and essentials handpicked for
               your furry friends. Shop now and make tails wag with joy!
             </p>
           </div>
 
-          <div class="mt-4 2xl:hidden xl:hidden">
+          <div
+            class="mt-4 2xl:hidden xl:hidden fade-in-up"
+            style="animation-delay: 1s"
+          >
             <button
-              class="btn btn-secondary border-0 rounded-[8px] bg-primaryC text-[#111111] text-[1.4rem] font-primaryF hover:bg-[#ffc107] relative z-2"
+              class="btn btn-secondary border-0 rounded-[8px] bg-primaryC text-[#111111] text-[1.4rem] font-primaryF hover:bg-[#ffc107] relative z-2 hover-grow"
             >
               Find a pet
             </button>
             <img
               src="images/cat-big.png"
               alt="BigCat"
-              class="relative top-[-6rem] sm:top-[-9rem] left-4 z-1"
+              class="relative top-[-6rem] sm:top-[-9rem] left-4 z-1 bounce"
             />
           </div>
-          <div class="hidden 2xl:block xl:block">
+          <div
+            class="hidden 2xl:block xl:block fade-in-up"
+            style="animation-delay: 1.5s"
+          >
             <div class="mt-4 relative z-2">
               <p
                 class="font-primaryF text-[#111111] w-13/20 text-[1.5rem] pb-[2rem]"
@@ -137,14 +191,14 @@
             </div>
             <div class="flex w-9/10">
               <button
-                class="btn btn-secondary border-0 rounded-[8px] bg-primaryC text-[#111111] font-primaryF hover:bg-[#ffc107] relative z-2 text-[1.5rem]"
+                class="btn btn-secondary border-0 rounded-[8px] bg-primaryC text-[#111111] font-primaryF hover:bg-[#ffc107] relative z-2 text-[1.5rem] hover-grow"
               >
                 Find a pet
               </button>
               <img
                 src="images/cat-big.png"
                 alt="BigCat"
-                class="relative top-[-24rem] left-4 z-1"
+                class="relative top-[-24rem] left-4 z-1 bounce"
               />
             </div>
           </div>
